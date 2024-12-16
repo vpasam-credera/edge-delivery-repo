@@ -17,7 +17,7 @@ export default function decorate(block) {
         const divElement = col.closest('div');
         if (divElement && divElement.children.length === 1) {
           // picture is only content in column
-          divElement.classList.add('columns-img-col');
+          divElement.classList.add('tabs-content');
         }
       }
       count += 1;
