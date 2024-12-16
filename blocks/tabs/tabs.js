@@ -4,15 +4,22 @@ export default function decorate(block) {
 
   // setup image columns
   [...block.children].forEach((row) => {
+    let count= 1;
     [...row.children].forEach((col) => {
-      const pic = col.querySelector('picture');
-      if (pic) {
-        const picWrapper = pic.closest('div');
-        if (picWrapper && picWrapper.children.length === 1) {
-          // picture is only content in column
-          picWrapper.classList.add('columns-img-col');
-        }
+      if(count == 1){
+        const divElement = col.closest('div');
+        const anchorElement = col.createElement("a");
+        anchorElement.href = "#";
+        anchorElement.appendChild(divElement.cloneNode(true));
+        divElement.parentNode.replaceChild(anchorElement, divElement);
       }
+      if(count == 2){
+        const divElement = col.closest('div');               
+          if (divElement && divElement.children.length === 1) {
+            // picture is only content in column
+            divElement.classList.add('columns-img-col');
+          }       
+      }      
     });
   });
 }
