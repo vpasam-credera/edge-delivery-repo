@@ -45,6 +45,7 @@
   vertical-align: middle;
   width: 60%;
   padding: 5%;
+  font-family: sans-serif;
 }
 
 .tabs div:not(#div1),
@@ -63,10 +64,6 @@ a.my-link {
   margin-bottom: 10px;
   position: relative;
   transition: 300ms;
-}
-
-.tabs-content {
-  font-family: sans-serif;
 }
 
 a.my-link.active,
