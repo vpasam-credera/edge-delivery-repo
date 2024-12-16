@@ -24,4 +24,21 @@ export default function decorate(block) {
       count += 1;
     });
   });
+  $(".tabs a[data-toggle]").on("click", function (e) {
+    e.preventDefault(); // prevent navigating
+    var selector = $(this).data("toggle"); // get corresponding element
+    $(".tabs-content div").hide();
+    $(selector).show();
+  });
+
+  $(".tabs > a:first-child").addClass("active");
+  $(".tabs a").click(function () {
+    var index = $(this).index();
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
+    } else {
+      $(".myLink").removeClass("active");
+      $(this).addClass("active");
+    }
+  });
 }
