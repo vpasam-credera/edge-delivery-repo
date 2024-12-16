@@ -10,6 +10,7 @@ export default function decorate(block) {
         const divElement = col.closest('div');
         const anchorElement = document.createElement('a');
         anchorElement.href = '#';
+        anchorElement.classList.add('myLink');
         anchorElement.appendChild(divElement.cloneNode(true));
         divElement.parentNode.replaceChild(anchorElement, divElement);
       }
