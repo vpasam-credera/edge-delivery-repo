@@ -20,7 +20,7 @@ export default function decorate(block) {
           divElement.classList.add('columns-img-col');
         }
       }
-      count++;
+      count += 1;
     });
   });
 }
