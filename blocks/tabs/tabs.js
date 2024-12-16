@@ -24,21 +24,22 @@ export default function decorate(block) {
       count += 1;
     });
   });
-  $(".tabs a[data-toggle]").on("click", function (e) {
+
+  document.querySelector(".tabs a[data-toggle]").on("click", function (e) {
     e.preventDefault(); // prevent navigating
-    var selector = $(this).data("toggle"); // get corresponding element
-    $(".tabs-content div").hide();
-    $(selector).show();
+    var selector = document.querySelector(this).data("toggle"); // get corresponding element
+    document.querySelector(".tabs-content div").hide();
+    document.querySelector(selector).show();
   });
 
-  $(".tabs > a:first-child").addClass("active");
-  $(".tabs a").click(function () {
-    var index = $(this).index();
-    if ($(this).hasClass("active")) {
-      $(this).removeClass("active");
+  document.querySelector(".tabs > a:first-child").addClass("active");
+  document.querySelector(".tabs a").click(function () {
+    var index = document.querySelector(this).index();
+    if (document.querySelector(this).hasClass("active")) {
+      document.querySelector(this).removeClass("active");
     } else {
-      $(".myLink").removeClass("active");
-      $(this).addClass("active");
+      document.querySelector(".myLink").removeClass("active");
+      document.querySelector(this).addClass("active");
     }
   });
 }
