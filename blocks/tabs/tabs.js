@@ -8,7 +8,7 @@ export default function decorate(block) {
     [...row.children].forEach((col) => {
       if (count === 1) {
         const divElement = col.closest('div');
-        const anchorElement = col.createElement('a');
+        const anchorElement = document.createElement('a');
         anchorElement.href = '#';
         anchorElement.appendChild(divElement.cloneNode(true));
         divElement.parentNode.replaceChild(anchorElement, divElement);
