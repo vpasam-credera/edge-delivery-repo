@@ -25,21 +25,21 @@ export default function decorate(block) {
     });
   });
 
-  document.querySelector(".tabs a[data-toggle]").on("click", function (e) {
+  document.querySelector('.tabs a[data-toggle]').on('click', function (e) {
     e.preventDefault(); // prevent navigating
-    var selector = document.querySelector(this).data("toggle"); // get corresponding element
-    document.querySelector(".tabs-content div").hide();
+    let selector = document.querySelector(this).data('toggle'); // get corresponding element
+    document.querySelector('.tabs-content div').hide();
     document.querySelector(selector).show();
   });
 
-  document.querySelector(".tabs > a:first-child").addClass("active");
-  document.querySelector(".tabs a").click(function () {
-    var index = document.querySelector(this).index();
-    if (document.querySelector(this).hasClass("active")) {
-      document.querySelector(this).removeClass("active");
+  document.querySelector('.tabs > a:first-child').addClass('active');
+  document.querySelector('.tabs a').click(function () {
+    let index = document.querySelector(this).index();
+    if (document.querySelector(this).hasClass('active')) {
+      document.querySelector(this).removeClass('active');
     } else {
-      document.querySelector(".myLink").removeClass("active");
-      document.querySelector(this).addClass("active");
+      document.querySelector('.myLink').removeClass('active');
+      document.querySelector(this).addClass('active');
     }
   });
 }
