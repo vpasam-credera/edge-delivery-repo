@@ -10,7 +10,7 @@ export default function decorate(block) {
         const divElement = col.closest('div');
         const anchorElement = document.createElement('a');
         anchorElement.href = '#';
-        anchorElement.classList.add('myLink');
+        anchorElement.classList.add('my-link');
         anchorElement.appendChild(divElement.cloneNode(true));
         divElement.parentNode.replaceChild(anchorElement, divElement);
       }
@@ -37,7 +37,7 @@ export default function decorate(block) {
     if (document.querySelector(this).hasClass('active')) {
       document.querySelector(this).removeClass('active');
     } else {
-      document.querySelector('.myLink').removeClass('active');
+      document.querySelector('.my-link').removeClass('active');
       document.querySelector(this).addClass('active');
     }
   });

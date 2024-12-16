@@ -52,7 +52,7 @@
   display: none;
 }
 
-a.myLink {
+a.my-link {
   display: inline-block;
   color: #000;
   width: 100%;
@@ -69,8 +69,8 @@ a.myLink {
   font-family: sans-serif;
 }
 
-a.myLink.active,
-a.myLink:hover {
+a.my-link.active,
+a.my-link:hover {
   color: #C53D29;
   text-decoration: none;
 }
