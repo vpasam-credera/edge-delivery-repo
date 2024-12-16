@@ -4,23 +4,23 @@ export default function decorate(block) {
 
   // setup image columns
   [...block.children].forEach((row) => {
-    let count= 1;
+    let count = 1;
     [...row.children].forEach((col) => {
-      if(count == 1){
+      if (count === 1) {
         const divElement = col.closest('div');
-        const anchorElement = col.createElement("a");
-        anchorElement.href = "#";
+        const anchorElement = col.createElement('a');
+        anchorElement.href = '#';
         anchorElement.appendChild(divElement.cloneNode(true));
         divElement.parentNode.replaceChild(anchorElement, divElement);
       }
-      if(count == 2){
-        const divElement = col.closest('div');               
-          if (divElement && divElement.children.length === 1) {
-            // picture is only content in column
-            divElement.classList.add('columns-img-col');
-          }       
-      } 
-      count++;     
+      if (count === 2) {
+        const divElement = col.closest('div');
+        if (divElement && divElement.children.length === 1) {
+          // picture is only content in column
+          divElement.classList.add('columns-img-col');
+        }
+      }
+      count++;
     });
   });
 }
